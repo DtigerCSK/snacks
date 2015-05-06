@@ -1,4 +1,4 @@
 # csgosnacks
 csgosnacks.com
 
-yes.
+Built on bootstrap.
