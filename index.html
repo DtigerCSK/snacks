@@ -1,225 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>CS:GO Snacks</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-	<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="./css/stylesheet.css">
+	<meta charset="utf-8">
+	<title>CSGO snacks</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/skeleton.css">
+	<link rel="stylesheet" href="css/custom.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="icon" type="image/png" href="images/favicon.png">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.8.3.js"></script>
 </head>
 <body>
-<div id="top"></div>
-<div id="loading"></div>
-<div class="header-behind"></div>
-<div class="header-wrapper">
-	<div class="header animated fadeIn">
-		<img src="./img/csgosnacks.svg" class="logo center-block">
-		<h1 class="text-center white">Delicious <span class="cross">hacks</span> snacks.<br></h1>
-		<h2 class="text-center white"><br><br><a href="#1"><span class="glyphicon glyphicon-chevron-down arrow"></span></a></h2>
-	</div>
+<div id="bg"></div>
+<div id="loading">
+	<i class="fa fa-circle-o-notch fa-spin load fa-3x"></i>
 </div>
-<!--NAVBAR-->
-<nav class="navbar navbar-default navbar-static-top" id="sticky" role="navigation">
-	<div class="container-fluid">
-		<div class="col-md-offset-3">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarcollapselol">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a href="#top" class="navbar-brand">CS:GO Snacks</a>
-			</div>
-			<div class="collapse navbar-collapse" id="navbarcollapselol">
-				<ul class="nav navbar-nav">
-					<li class="active">
-						<a href="#top">Home</a>
-					</li>
-					<li>
-						<a href="./potatohacks">Potato Hacks</a>
-					</li>
-					<li>
-						<a href="./about">About</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-</nav>
-<!--END NAVBAR-->
-<div id="1"></div>
-<hr>
-<div class="container-fluid">
-	<div class="col-md-offset-1 col-md-10">
-		<div class="page-header">
-			<h1>CS:GO Snacks <small>Delicious <span class="cross">hacks</span> snacks.</small></h1>
-		</div>
-		<!--START SLIDEY SHIT-->
-		<div id="slideyman-lol" class="carousel slide thumbnail" data-ride="carousel">
-			<!--INDICATOR SHIT-->
-			<ol class="carousel-indicators">
-				<li data-target="#slideyman-lol" data-slide-to="0" class="active"></li>
-				<li data-target="#slideyman-lol" data-slide-to="1"></li>
-				<li data-target="#slideyman-lol" data-slide-to="2"></li>
-				<li data-target="#slideyman-lol" data-slide-to="3"></li>
-				<li data-target="#slideyman-lol" data-slide-to="4"></li>
-			</ol>
-			<!--END INDICATOR SHIT-->
-			<!--WAPPER-->
-			<div class="carousel-inner">
-				<div class="item active">
-					<img src="./img/potatohack.jpg">
-					<div class="carousel-caption">
-						<p>Potato Hacks, free and undetectable!</p>
-					</div>
-				</div>
-				<div class="item">
-					<img src="./img/potatoman.jpg">
-					<div class="carousel-caption">
-						<p>Large amount of features, including Potato ESP.</p>
-					</div>
-				</div>
-				<div class="item">
-					<img src="./img/potatoxray.jpg">
-				</div>
-				<div class="item">
-					<img src="./img/potatoknife.jpg">
-				</div>
-				<div class="item">
-					<img src="./img/potatowalls.jpg">
-				</div>
-			</div>
-			<!--END WAPPER-->
-			<!--CONTROLS-->
-			<a href="#slideyman-lol" class="left carousel-control" role="button" data-slide="prev">
-				<span class="glyphicon glyphicon-chevron-left"></span>
-			</a>
-			<a href="#slideyman-lol" class="right carousel-control" role="button" data-slide="next">
-				<span class="glyphicon glyphicon-chevron-right"></span>
-			</a>
-			<!--END CONTROLS-->
-		</div>
-		<!--END SLIDEY SHIT-->
-		<hr>
-		<div class="page-header">
-			<h1>Downloads</h1>
-		</div>
+	<div class="container" style="margin-bottom: 5%">
 		<div class="row">
-			<div class="col-sm-6 col-md-4">
-				<div class="thumbnail">
-					<img src="./img/potatohacks_thumb.jpg">
-					<div class="caption">
-						<h3>Potato Hacks</h3>
-						<p>Finest in it's class, the potato hacks will guarantee  win in every game you play.  100% undetectable and will not get you a VAC ban <b>ever</b>.</p>
-						<p><a href="./potatohacks" class="btn btn-primary">Download</a> <a href="./potatohacks#more" class="btn btndefault">Learn more</a></p>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4">
-				<div class="thumbnail">
-					<img src="./img/potatohacks_thumb.jpg" style="opacity:0.3">
-					<div class="caption">
-						<h3>Kiwi Hacks</h3>
-						<p>The most delicious hack of all, defeat your enemies by making them into friends.  5% success rate, CS:GO Snacks is not responsible for any bullets to the face.</p>
-						<p><a href="#" class="btn btn-primary" disabled="disabled">Coming soon!</a></p>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4">
-				<div class="thumbnail">
-					<img src="./img/potatohacks_thumb.jpg" style="opacity:0.3">
-					<div class="caption">
-						<h3>Tomato</h3>
-						<p>It's just a tomato.</p>
-						<p>Like really what do you want, more potatos?</p>
-						<p>No, didn't think so.</p>
-						<p><a href="#" class="btn btn-primary" disabled="disabled">Tomato</a></p>
-					</div>
-				</div>
+			<div class="one-half column" style="margin-top: 15%;margin-bottom: 20%">
+				<img src="images/csgosnacks.svg" class="logo">
+				<h2>Delicious Snacks</h2>
+				<a class="button" href="#dl">Learn More</a> <a class="button button-primary" href="https://steamcommunity.com/groups/csgosnacks" style="margin-left: 20px;">Steam Group</a>
 			</div>
 		</div>
 		<hr>
+		<div class="screenshots">
+			<h3>Screenshots</h3>
+			<img src="images/1.jpg">
+			<img src="images/2.jpg">
+			<img src="images/3.jpg">
+			<img src="images/4.jpg">
+			<img src="images/5.jpg">
+		</div>
+		<hr id="dl">
+		<div style="margin-bottom: 20%">
+			<h3>Downloads</h3>
+			<h5>Potato Snack</h5>
+			<p>Finest in it's class, the potato snack will give a win in nearly every game you play, up to 50% win rate! 100% undetectable and will not get you a VAC ban <b>ever</b>. <small>(Because it doesn't do anything)</small></p>
+			<a id="download" style="margin-left:10px;margin-right:10px" class="button button-primary" href="./potato.html"><span>Download</span></a>
+		</div>
+		<hr>
+		<div class="footer">
+			<p>This site is not affiliated with valve. <br>If you haven't figured out already, this website is a joke, there are <b>no</b> real cheats on this website. :)</p>
+		</div>
 	</div>
-</div>
-<div class="container">
-	<div class="footerlol">
-		<p class="f-left">This site is not affilated with Valve.</p>
-		<p class="f-right">Join the <a href="http://steamcommunity.com/groups/csgosnacks">steam group</a>.</p>
-	</div>
-</div>
-<div class="container">
-<br>
-	<div class="footerlol">
-		<p class="text-center"><b>If you haven't figured out already, this website is a joke, there are no real cheats on this website.  :)</b></p>
-		<!--DONATE BITCOIN-->
-		<script src="http://coinwidget.com/widget/coin.js"></script>
-		<script>
-		CoinWidgetCom.go({
-			wallet_address: "14ZKc1x6in2wzR4Tgik7P9EL48zfDMYXgq"
-			, currency: "bitcoin"
-			, counter: "amount"
-			, alignment: "al"
-			, qrcode: true
-			, auto_show: false
-			, lbl_button: "Donate"
-			, lbl_address: "My Bitcoin Address:"
-			, lbl_count: "donations"
-			, lbl_amount: "BTC"
-		});
-		</script>
-		<!--DONATE DOGECOIN-->
-		<script src="./js/doge.js"></script>
-		<script>
-		DogetsCom.go({
-		 wallet_address: "DTDXsDyfzhnDhMDHDnSJosU6jrrWSvY2gd",
-		 currency: "dogecoin",
-		 counter: "count",
-		 alignment: "al",
-		 qrcode: true,
-		 auto_show: false,
-		 lbl_button: "Donate Dogecoin",
-		 lbl_address: "Donate Dogecoin to this Address:",
-		 lbl_count: "donations",
-		 lbl_amount: "DOGE"});
-		</script>
-	</div>
-<br>
-</div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>  
-<script src="./js/jquery.sticky.js"></script>
-<!--Sticky Navbar-->
-<script>
-  $(document).ready(function(){
-    $("#sticky").sticky({topSpacing:0});
-  });
-</script>
 <!--Loading-->
 <script>
 $(window).load(function(){
     $('#loading').fadeOut();
+    $("#download").on({
+	        mouseover:function(){
+	            $(this).css({
+	                "margin-left":(Math.random()*200)+"px",
+	                "margin-top":(Math.random()*200)+"px",
+	            }).text("can't touch me");
+	        }
+	    });
 });
 </script>
-<!--Smooth Scroll thing-->
-<script>
-    $(function() {
-	  $('a[href*=#]:not([href=#slideyman-lol])').click(function() {
-	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-	      var target = $(this.hash);
-	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-	      if (target.length) {
-	        $('html,body').animate({
-	          scrollTop: target.offset().top
-	        }, 750,'easeInOutExpo');
-	        return false;
-	      }
-	    }
-	  });
-	});
-</script>
+<!--button-->
+
 </body>
 </html>
