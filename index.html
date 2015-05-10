@@ -19,9 +19,9 @@
 <div id="loading">
 	<i class="fa fa-circle-o-notch fa-spin load fa-3x"></i>
 </div>
-	<div class="container" style="margin-bottom: 5%">
-		<div class="row">
-			<div class="one-half column" style="margin-top: 15%;margin-bottom: 20%">
+	<div class="container" style="margin-bottom: 10%">
+		<div class="row intro">
+			<div class="twelve columns" style="margin-top: 15%;margin-bottom: 20%">
 				<img src="images/csgosnacks.svg" class="logo">
 				<h2>Delicious Snacks</h2>
 				<a class="button" href="#dl">Learn More</a> <a class="button button-primary" href="https://steamcommunity.com/groups/csgosnacks" style="margin-left: 20px;">Steam Group</a>
@@ -41,7 +41,10 @@
 			<h3>Downloads</h3>
 			<h5>Potato Snack</h5>
 			<p>Finest in it's class, the potato snack will give a win in nearly every game you play, up to 50% win rate! 100% undetectable and will not get you a VAC ban <b>ever</b>. <small>(Because it doesn't do anything)</small></p>
-			<a id="download" style="margin-left:10px;margin-right:10px" class="button button-primary" href="./potato.html"><span>Download</span></a>
+			<a id="download" style="margin-left:40%;margin-right:10px" class="button button-primary" href="./potato.html"><span id="lenny">Download</span></a>
+			<audio class="canttouchthis">
+				<source src="canttouchthis.mp3" type="audio/mpeg">
+			</audio>
 		</div>
 		<hr>
 		<div class="footer">
@@ -55,9 +58,12 @@ $(window).load(function(){
     $("#download").on({
 	        mouseover:function(){
 	            $(this).css({
-	                "margin-left":(Math.random()*200)+"px",
-	                "margin-top":(Math.random()*200)+"px",
-	            }).text("can't touch me");
+	                "margin-left":(Math.random()*300+250)+"px",
+	                "margin-top":(Math.random()*300)+"px",
+	            });
+	            $("#lenny").text("( ͡° ͜ʖ ͡°)").addClass("lenny");
+	            $(".canttouchthis").trigger('play');
+
 	        }
 	    });
 });
