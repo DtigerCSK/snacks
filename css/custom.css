@@ -1,3 +1,18 @@
+/*
+                        _                       
+                       | |                      
+   __ _ _   _ _   _    | |_ __ ___   __ _  ___  
+  / _` | | | | | | |   | | '_ ` _ \ / _` |/ _ \ 
+ | (_| | |_| | |_| |   | | | | | | | (_| | (_) |
+  \__,_|\__, |\__, |   |_|_| |_| |_|\__,_|\___/ 
+         __/ | __/ |                            
+        |___/ |___/                            
+
+
+https://github.com/DtigerCSK
+
+*/
+
 #bg {
 	background-image: url(https://i.imgur.com/IYhIDFS.jpg); 
 	background-size: cover !important;
@@ -70,6 +85,7 @@ img.intro {
 	width: 100%;
 	margin-bottom: 30px;
 	opacity: 0.5;
+	background-color: #000000;
 }
 
 .screenshots img:hover {
