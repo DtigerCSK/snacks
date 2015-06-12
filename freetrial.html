@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>CSGOSNACKS - Free Trial</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/skeleton.css">
+	<link rel="stylesheet" href="css/custom.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+<div id="bg"></div>
+<div id="loading">
+	<i class="fa fa-circle-o-notch fa-spin load fa-3x"></i>
+</div>
+	<div class="container">
+		<div class="row">
+			<div class="column" style="margin-top: 25%">
+				<h3>Free Trial</h3>
+				<a class="button button-primary" style="margin-top: 30px;" href="./">Back to site</a>
+				<a id="download" style="margin-left:40%;margin-right:10px" class="button button-primary" href="./potato.html"><span id="lenny">Download</span></a>
+				<audio class="canttouchthis">
+					<source src="rick.mp3" type="audio/mpeg">
+				</audio>
+			</div>
+		</div>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!--Loading-->
+<script>
+$(window).load(function(){
+    $('#loading').fadeOut();
+    $("#download").on({
+	        mouseover:function(){
+	            $(this).css({
+	                "margin-left":(Math.random()*25+20)+"%",
+	                "margin-top":(Math.random()*30)+"%",
+	            });
+	            $("#lenny").text("( ͡° ͜ʖ ͡°)").addClass("lenny");
+	            $(".canttouchthis").trigger('play');
+	        }
+	    });
+});
+</script>
+</body>
+</html>
