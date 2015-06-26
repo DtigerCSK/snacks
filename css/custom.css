@@ -13,22 +13,22 @@ https://github.com/DtigerCSK
 
 */
 
-#bg {
+.features {
 	background-image: url(https://i.imgur.com/IYhIDFS.jpg); 
 	background-size: cover !important;
 	width: 100%;
-	height: 100%;
 	background-attachment: fixed;
-	z-index: -999;
-	position: fixed;
 }
 
 body {
 	color: #ffffff;
+	background-color: #1b1b1b;
 }
 
 .button {
 	color: #ffffff;
+	position: relative;
+	z-index: 9000
 }
 
 .button:hover {
@@ -36,7 +36,6 @@ body {
 }
 
 .container {
-	background-color:rgba(0, 0, 0, 0.03);
 	padding-left: 50px;
 	padding-right: 50px;
 }
@@ -48,7 +47,7 @@ body {
 #loading {
 	background-color: #1b1b1b;
 	position: fixed;
-	z-index: 9001;
+	z-index: 9002;
 	width: 100%;
 	height: 100%;
 }
@@ -86,6 +85,8 @@ img.intro {
 	margin-bottom: 30px;
 	opacity: 0.5;
 	background-color: #000000;
+	position: relative;
+	z-index: 10;
 }
 
 .screenshots img:hover {
@@ -122,4 +123,50 @@ img.intro {
 	left: 0;
 	width: 100%;
 	height: 100%;
+}
+
+/*menu bar*/
+.mbutton {
+	display: inline-block;
+}
+
+.mbutton {
+	text-decoration: none;
+	color: #fff;
+	padding: 10px 10px;
+	height: 30px;
+}
+
+.menu {
+	width: 100%;
+	position: fixed;
+	z-index: 9001;
+	background-color: rgba(24,24,24, 0.8);
+	height: 50px;
+}
+
+.menucontent {
+	max-width: 860px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+
+.active {
+	color: #1EAEDB;
+}
+
+.center {
+	text-align: center;
+	width: 100%;
+}
+
+.quotel {
+	margin-right: 10px;
+	opacity: 0.1;
+}
+
+.quoter {
+	margin-left: 10px;
+	opacity: 0.1;
 }
