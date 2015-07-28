@@ -18,6 +18,15 @@
 <div id="loading">
 	<i class="fa fa-circle-o-notch fa-spin load fa-3x"></i>
 </div>
+<div id="buy" style="display:none;">
+	<div class="container">
+		<div class="row">
+			<div id="message" style="margin-top:20%">
+				<h1><i class="fa fa-spinner fa-pulse"></i>    Redirecting to secure checkout...</h1>
+			</div>
+		</div>
+	</div>
+</div>
 <div class="menu">
 	<div class="menucontent">
 		<a class="mbutton" href="./">Home</a>
@@ -32,9 +41,18 @@
 		<h3>Products</h3>
 		<hr>
 			<div class="row">
-				<div class="one-third column">
-					<h5>Free Snack</h5>
-					<p>The lighter version of our paid snacks, it is still 100% undetectable and will <b>never</b> give you a VAC ban.</p>
+				<div class="one-half column">
+					<h5><b>Free Snack</b></h5>
+					<p>The free snack works in matchmaking and most pug services.</p>
+					<p><b>Features</b></p>
+					<ul>
+						<li>Walls and Floors</li>
+						<li><b>Security</b></li>
+						<ul>
+							<li>Kernelmode (ring0)</li>
+							<li>Monthly code changes</li>
+						</ul>
+					</ul>
 					<a id="download" style="margin-right:10px" class="button button-primary u-full-width" href="downloads"><span id="lenny">Download</span></a>
 					<!--
 					<audio class="canttouchthis">
@@ -42,15 +60,24 @@
 					</audio>
 					-->
 				</div>
-				<div class="one-third column">
-					<h5>Premium Snack</h5>
-					<p>A superfueled version of the free snack, the premium snack includes a larger selection of snacks to choose from.</p>
-					<a href="potato" class="button button-primary u-full-width">$25 / month</a>
-				</div>
-				<div class="one-third column">
-					<h4>Potato Snack</h4>
-					<p>The ultimate snack there is, the only snack in the world that provides not only walls, but also floors <i>and</i> ceilings.</p>
-					<a href="potato" class="button button-primary u-full-width">$50 / month</a>
+				<div class="one-half column">
+					<h5><b>League Snack</b></h5>
+					<p>The league snack works in ESEA and provides ultimate security against anti-cheats.</p>
+					<p><b>Features</b></p>
+					<ul>
+					<li>League Aimbot</li>
+					<li>Triggerbot</li>
+					<li>ESP</li>
+					<li>Full customiazation</li>
+					<li>Legit & Rage modes</li>
+					<li><b>Security</b></li>
+						<ul>
+							<li>Kernelmode (ring0)</li>
+							<li>Weekly code changes</li>
+							<li>Signature obfuscation</li>
+						</ul>
+					</ul>
+					<a id="buyButton" class="button button-primary u-full-width">€250 / month</a>
 				</div>
 			</div>
 		</div>
@@ -72,6 +99,17 @@ $(window).load(function(){
 	            $(".canttouchthis").trigger('play');
 	        }
 	    });*/
+	$("#buyButton").click(function() {
+		console.log("buy - clicked");
+		$("#buy").fadeIn();
+		setTimeout(function() {
+			$("#message").html("<h3><span style='color:#e74c3c'>An error occurred, redirecting back to CSGOSNACKS...</span></h3>").fadeIn();
+			setTimeout(function() {
+				window.location.href = "./thanks"
+			}, 4000);
+		}, 5000);
+		
+	});
 });
 //How do I even javascript lol
 </script>
