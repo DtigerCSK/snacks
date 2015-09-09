@@ -39,61 +39,142 @@ wut r u trying to do here wiht my sauce
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<link rel="icon" type="image/png" href="images/favicon.png">
 	<script type="text/javascript" src="https://code.jquery.com/jquery-1.8.3.js"></script>
-	<script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 </head>
 <body>
-<div id="dotLoader" class="dotloaderWrapper" style="display:none">
-	<h5>loading snacks</h5>
-	<i class="fa fa-circle-thin"></i> <i class="fa fa-circle-thin dLoader2"></i> <i class="fa fa-circle-thin dLoader3"></i>
-</div>
 <div id="bg"></div>
-<div id="content" style="display: none;">
-	<div class="container intro" style="margin-top: 5%; height:100%;">
+<div class="menu" style="display:none;">
+	<div class="menucontent">
+		<a class="mbutton" href="./">Home</a>
+	</div>	
+</div>
+<div id="content" style="display:none;">
+	<div class="container">
 		<div class="row">
-			<div class="twelve columns">
-				<img src="images/csgosnacks.svg" class="logo">
+			<div class="twelve columns" style="margin-top: 10%;margin-bottom: 20%">
+				<h1 class="intro">SnackPot <small>BETA</small></h1>
+				<div class="row">
+					<div class="twelve columns youLost" style="display:none;">
+						<h1>You lost!</h1>
+						<h4>Thanks for the skins! :^)</h4>
+					</div>
+				</div>
+				<div class="row">
+					<div class="six columns">
+						<h5>Skins Deposited: <span id="skins">0</span></h5>
+						<h5>Value Deposited: $<span id="value">0</span></h5>
+						<h5>Chance of Win: <span id="chance">0</span>%</h5>
+					</div>
+					<div class="six columns">
+						<div class="row">
+							<div class="twelve columns">
+								<a href="#" class="pickerButton" id="deposit"><h2>Deposit Skins</h2></a>
+							</div>
+						</div>
+						<div class="row">
+							<div class="six columns">
+								<div id="win"></div>
+								<p class="win">Win</p>
+							</div>
+							<div class="six columns">
+								<div id="loss"></div>
+								<p class="loss">Loss</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="twelve columns">
+						<div class="row">
+							<div class="twelve columns">
+								<h5 class="center">|</h5>
+							</div>
+						</div>
+						<div class="spinner">
+							<h4 class="depositSkins">Deposit Skins to Enter</h4>
+							<div id="spinnerBlank"></div>
+							<div id="spinner"></div>
+							<div id="spinner2"></div>
+							<div id="spinner3"></div>
+						</div>
+						
+					</div>
+				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="six columns">
-				<a id="snackpot" href="#" class="pickerButton"><h2>SnackPot</h2></a>
-			</div>
-			<div class="six columns">
-				<a id="snacks" href="#" class="pickerButton"><h2>Snacks</h2></a>
-			</div>
-		</div>
+	</div>
+	<div class="container center" style="margin-top: 5%; margin-bottom: 5%;">
+		<div id="disqus_thread"></div>
+		<script type="text/javascript">
+		    /* * * CONFIGURATION VARIABLES * * */
+		    var disqus_shortname = 'csgosnacks';
+		    
+		    /* * * DON'T EDIT BELOW THIS LINE * * */
+		    /* DON'T TELL ME WHAT I CAN'T DO BITCH*/
+		    (function() {
+		        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+		        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		    })();
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 	</div>
 </div>
 <!--Loading-->
 <script>
 $(window).load(function(){
-	//fade in main content
-    $('#content').fadeIn("1000").addClass('scaleup');
-    //click snackpot
-    $('#snackpot').click(function() {
-    	//fadeout content
-    	$('#content').fadeOut("1000").removeClass('scaleup').addClass('scaledown');
-    	//redirect after 1 sec
-    	setTimeout(function() {
-		  window.location.href = "snackpot.html";
-		}, 1000);
-    });
-    //click snacks
-    $('#snacks').click(function() {
-    	//fadeout content
-    	$('#content').fadeOut("1000").removeClass('scaleup').addClass('scaledown');
-    	//redirect after 1 sec
-    	setTimeout(function() {
-		  window.location.href = "snacks.html";
-		}, 1000);
-    });
+    console.log("hi wat u doing here lol");
+    $('#content').fadeIn('1000').addClass('scaleup');
+	$('.menu').fadeIn('1000');
+	$('#deposit').click(function() {
+		$('.depositSkins, #spinnerBlank').fadeOut('1000');
+		$('#deposit').hide().addClass('inactive').html('<h2>Skins Deposited</h2>').fadeIn('1000');
+		//skins animation
+		animateNumber('skins', 20, 80);
+		setTimeout(function() {
+			//value animation
+			animateNumber('value', 200, 10000);
+			setTimeout(function() {
+				//chance animation
+				animateNumber('chance', 97, 99);
+				setTimeout(function() {
+					roll();
+					setTimeout(function() {
+						$('.youLost').slideDown();
+					}, 8000);
+				}, 2000);
+			}, 500);
+		}, 500);
+	});
 });
 
-/*
-function click() {
-	$('#dotLoader').delay('500').fadeIn('1000').addClass('scaleup').delay('1500').fadeOut('1000');
-}
-*/
+function animateNumber(id, min, max) {
+	$({value: min}).animate({value: random(min, max)}, {
+		duration: 1500,
+		easing: 'swing',
+		step: function() {
+			//update text
+			$('#' + id).text(commaSeparateNumber(Math.round(this.value)));
+		}
+	});
+};
+
+function random(min, max) {
+	//random # between min and max
+	var random = Math.ceil(Math.random() * (max - min + 1)) + min;
+	return random;
+};
+
+function commaSeparateNumber(val) {
+	while (/(\d+)(\d{3})/.test(val.toString())) {
+		val = val.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+	}
+	return val;
+};
+
+function roll() {
+	$('.spinner').addClass('spin');
+};
+
 //How do I even javascript lol
 </script>
 </body>
