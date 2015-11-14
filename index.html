@@ -39,61 +39,99 @@ wut r u trying to do here wiht my sauce
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<link rel="icon" type="image/png" href="images/favicon.png">
 	<script type="text/javascript" src="https://code.jquery.com/jquery-1.8.3.js"></script>
-	<script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 </head>
 <body>
-<div id="dotLoader" class="dotloaderWrapper" style="display:none">
-	<h5>loading snacks</h5>
-	<i class="fa fa-circle-thin"></i> <i class="fa fa-circle-thin dLoader2"></i> <i class="fa fa-circle-thin dLoader3"></i>
-</div>
+
 <div id="bg"></div>
-<div id="content" style="display: none;">
-	<div class="container intro" style="margin-top: 5%; height:100%;">
-		<div class="row">
-			<div class="twelve columns">
+<div class="menu" style="display:none;">
+	<div class="menucontent">
+		<a class="mbutton" href="./">Home</a>
+		<a class="mbutton" href="about">About</a>
+		<a class="mbutton" href="screenshots">Screenshots</a>
+		<a class="mbutton" href="products">Products</a>
+	</div>	
+</div>
+<div id="content" style="display:none;">
+	<div class="container">
+		<div class="row intro">
+			<div class="twelve columns" style="margin-top: 10%;margin-bottom: 20%">
 				<img src="images/csgosnacks.svg" class="logo">
+				<h1>Delicious Snacks</h1>
+				<h5>Proud sponsors of <a href="http://boostforeskins.com" target="_blank">boostforeskins</a></h5>
+				<a class="button" href="about">Learn More</a> <a class="button button-primary" href="https://steamcommunity.com/groups/csgosnacks" style="margin-left: 20px;" target="_blank">Steam Group</a>
 			</div>
 		</div>
-		<div class="row">
-			<div class="six columns">
-				<a id="snackpot" href="#" class="pickerButton"><h2>SnackPot</h2></a>
+	</div>
+	<div class="features">
+		<div class="container" style="padding-top: 5%; padding-bottom: 5%;">
+			<div class="twelve columns center" style="padding-bottom: 2.5%;">
+				<h3>Features</h3>
 			</div>
-			<div class="six columns">
-				<a id="snacks" href="#" class="pickerButton"><h2>Snacks</h2></a>
+			<div class="row">
+				<div class="one-third column center">
+					<i class="fa fa-ban fa-5x"></i>
+					<h5>100% Undetectable</h5>
+				</div>
+				<div class="one-third column center">
+					<i class="fa fa-desktop fa-5x"></i>		
+					<h5>Easy Installation</h5>
+				</div>
+				<div class="one-third column center">
+					<i class="fa fa-thumbs-o-up fa-5x"></i>
+					<h5>Many Features</h5>
+				</div>
 			</div>
+			<div class="center" style="margin-top: 5%;">
+				<a href="products" class="button">GET IN NOW</a>
+			</div>
+		</div>
+	</div>
+	<div class="container center" style="margin-top: 5%; margin-bottom: 5%;">
+		<h3><i class="fa fa-comments-o fa-1x"></i>  Testimonials</h3>
+		<p><i class="fa fa-quote-left fa-3x quotel"></i> Top kek <i class="fa fa-quote-right fa-3x quoter"></i></p>
+		<p><i class="fa fa-quote-left fa-3x quotel"></i> Dank <i class="fa fa-quote-right fa-3x quoter"></i></p>
+		<p><i class="fa fa-quote-left fa-3x quotel"></i> 4/20, best cheats I've used <i class="fa fa-quote-right fa-3x quoter"></i></p>
+		<p><i class="fa fa-quote-left fa-3x quotel"></i> Sample Text <i class="fa fa-quote-right fa-3x quoter"></i></p>
+	</div>
+	<div class="container center" style="margin-top: 5%; margin-bottom: 5%;">
+		<div id="disqus_thread"></div>
+		<script type="text/javascript">
+		    /* * * CONFIGURATION VARIABLES * * */
+		    var disqus_shortname = 'csgosnacks';
+		    
+		    /* * * DON'T EDIT BELOW THIS LINE * * */
+		    (function() {
+		        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+		        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		    })();
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+	</div>
+	<div class="container">
+		<div class="footer">
+			<p>This site is not affiliated with valve. <br>If you haven't figured out already, this website is a joke, there are <b>no</b> real cheats on this website. :)</p>
 		</div>
 	</div>
 </div>
 <!--Loading-->
 <script>
 $(window).load(function(){
-	//fade in main content
-    $('#content').fadeIn("1000").addClass('scaleup');
-    //click snackpot
-    $('#snackpot').click(function() {
-    	//fadeout content
-    	$('#content').fadeOut("1000").removeClass('scaleup').addClass('scaledown');
-    	//redirect after 1 sec
-    	setTimeout(function() {
-		  window.location.href = "snackpot";
-		}, 1000);
-    });
-    //click snacks
-    $('#snacks').click(function() {
-    	//fadeout content
-    	$('#content').fadeOut("1000").removeClass('scaleup').addClass('scaledown');
-    	//redirect after 1 sec
-    	setTimeout(function() {
-		  window.location.href = "snacks";
-		}, 1000);
-    });
+    $("#download").on({
+	        mouseover:function(){
+	            $(this).css({
+	                "margin-left":(Math.random()*25+20)+"%",
+	                "margin-top":(Math.random()*30)+"%",
+	            });
+	            $("#lenny").text("( ͡° ͜ʖ ͡°)").addClass("lenny");
+	            $(".canttouchthis").trigger('play');
+	        }
+	    });
+    console.log("hi wat u doing here lol");
+    $('#content').fadeIn('1000').addClass('scaleup');
+	$('.menu').fadeIn('1000');
 });
 
-/*
-function click() {
-	$('#dotLoader').delay('500').fadeIn('1000').addClass('scaleup').delay('1500').fadeOut('1000');
-}
-*/
 //How do I even javascript lol
 </script>
 </body>
